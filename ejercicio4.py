@@ -22,6 +22,19 @@ print(f"Verificación con fórmula: (formula)")
 
 #Tu turno: Reescribe el ejercicio usando for en lugar de while. ¿Cuál versión es más natural para este problema? Explica por qué con tus palabras.
 
+N = int(input("Suma del 1 hasta: "))
+
+suma = 0 
+
+for i in range(1, N + 1):
+    suma += i 
+
+print(f"Suma de 1 a {N}: {suma}")
+
+formula = N * (N + 1) // 2
+print(f"Verificación con fórmula: {formula}")
+
+
 #Ejercicio - while para validar entrada: el patrón de reintento.
 
 nota = float(input("Calificación (0-10):"))
@@ -44,3 +57,26 @@ print(f"Edad registrada: (edad)")
 
 #Tu turno: Crea un programa que pida al usuario adivinar un número secreto (define tú el número con una constante). Con while, sigue pidiendo hasta que lo adivine e imprime cuántos intentos necesitó.
 
+NUMERO_SECRETO = 7
+
+intentos = 0
+adivinado = False
+
+print("=== ¡Adivina el Número Secreto! ===")
+print("He pensado un número entre 1 y 10. ¿Puedes adivinar cuál es?")
+print("-" * 40)
+
+while not adivinado:
+    intento_usuario = int(input("Introduce tu número: "))
+    intentos += 1
+    
+    if intento_usuario == NUMERO_SECRETO:
+        print("\n¡Felicidades! Has acertado.")
+        adivinado = True  
+        print("El número secreto es mayor. ¡Intenta de nuevo!")
+    else:
+        print("El número secreto es menor. ¡Intenta de nuevo!")
+
+print("-" * 40)
+print(f"=== FIN DEL JUEGO ===")
+print(f"Lograste adivinar el número en {intentos} intentos.")
