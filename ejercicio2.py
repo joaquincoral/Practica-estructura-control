@@ -45,3 +45,22 @@ else:
 
 #Tu turno: Reescribe el Ejercicio  usando una sola condición con and en lugar del if anidado. Luego compara las dos versiones: ¿cuál da mensajes de error más específicos y por qué?
 
+nota = float(input("Calificación (0-10): "))
+
+if nota >= 9.0 and nota <= 10:
+    letra = "A - Excelente"
+elif nota >= 8.0 and nota < 9.0:
+    letra = "B - Bien"
+elif nota >= 7.0 and nota < 8.0:
+    letra = "C - Suficiente"
+elif nota >= 6.0 and nota < 7.0:
+    letra = "D - Aprobado mínimo"
+elif nota >= 0 and nota < 6.0:
+    letra = "F - Reprobado"
+else:
+    letra = "Calificación inválida"
+
+if 0 <= nota <= 10:
+    print(f"Nota: {nota:.1f} -> {letra}")
+else:
+    print(letra)

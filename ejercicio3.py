@@ -162,7 +162,7 @@ print("-" * 50)
 if total_alumnos > 0:
     promedio_grupo = suma_notas / total_alumnos
     cantidad_reprobados = total_alumnos - cantidad_aprobados
-    porcentaje_aprobados = (cantidad_aprobados / total_alumnos) * 180 # Espera, la fórmula correcta es * 100 para porcentaje.
+    porcentaje_aprobados = (cantidad_aprobados / total_alumnos) * 180 
     porcentaje_aprobados = (cantidad_aprobados / total_alumnos) * 100
     
     print(f"Promedio:\t{promedio_grupo:.2f}")
